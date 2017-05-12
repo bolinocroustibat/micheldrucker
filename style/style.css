@@ -1,32 +1,13 @@
-html{
-	height:100%;
+html, body{
+	height: 100%;
 }
 
 body{
-	text-align:center;	
-}
-
-body:after{
-	content: "STAGING";
-	position: fixed;
-	width: 180px;
-	height: 50px;
-	background: #EE8E4A;
-	top: 7px;
-	left: -50px;
-	text-align: center;
-	font-size: 20px;
-	text-transform: uppercase;
-	font-weight: bold;
-	color: #fff;
-	line-height: 50px;
-	-ms-transform:rotate(-45deg);
-	-webkit-transform:rotate(-45deg);
-	transform:rotate(-45deg);
+	margin: 0;
 }
 
 input{
-	margin-bottom:20px;
+	margin:20px;
 	width:270px;
 	height:35px;
 	cursor:pointer;
@@ -34,23 +15,28 @@ input{
 }
 
 #main-wrapper{
+	height:100%;
+}
+
+#iphone-wrapper{
+	height:100%;
+	margin: 0 auto 0 auto;
 	background-image:url("iphone-canvas.png");
-	width:682px;
-	height:1314px;
-	margin : 0 auto 0 auto;
-	padding: 220px 40px 220px 40px;
-	box-sizing: border-box;
+	background-size: contain;
+	background-repeat: no-repeat;
+    background-position: center top;
+	position: relative;
 }
 
-.project-wrapper{
-	width:600px;
-	height:890px;
+#couv{
+	width: 88%;
+	left: 6%;
+	height:68%;
+	top:16%;
+	background-size: contain;
+	background-repeat: no-repeat;	
+	position: relative;
 }
-
-input{
-	margin:20px;
-}
-
 
 h1{
 	font-family: 'Pacifico', cursive;
@@ -136,4 +122,17 @@ h1{
 	top:0px;
 	left:400px;
 	text-align:right;
+}
+
+@media only screen and (max-device-width: 480px) {
+	#iphone-wrapper{
+		background: none;
+	}
+	#couv{
+        height: 100vh;
+        width: 100vw;
+        position:fixed;
+        top:0;
+        left:0;
+	}
 }

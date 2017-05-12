@@ -25,4 +25,3 @@
 <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
 
 <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>

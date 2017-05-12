@@ -42,24 +42,27 @@
 	<?php include("header.php"); ?>
 </head>
 
-<body>
+<body onload="setHeight()">
 
-	<div id="main-wrapper">
+<script>
+	function setHeight() {
+		$("#iphone-wrapper").width(($("#iphone-wrapper").height())*52/100);
+	};
+</script>
 
-		<div class="project-wrapper" style="background-image:url('./photos/<?php echo $couv_string; ?>'); ">
-		
+<div id="main-wrapper">
+	<div id="iphone-wrapper">
+		<div id="couv" style="background-image:url('photos/<?php echo $couv_string; ?>')" />
+
 			<h1><span class="big_h1">Michel Drucker</span>e-magazine</h1>
-
-			<div class="quiz"><?php echo $quiz_string; ?></div>			
+			<div class="quiz"><?php echo $quiz_string; ?></div>	
 			<div class="article" id="article1"><?php echo $article1_string; ?></div>
 			<div class="article" id="article2"><?php echo $article2_string; ?></div>
 			<div class="une"><?php echo $une_string; ?></div>
-			
+		
 		</div>
-
-	</div>
-	
-	<input type="button" onClick="window.location.reload()" value="Engendrer une nouvelle édition">
+	</div>	
+</div>
 
 </body>
 
