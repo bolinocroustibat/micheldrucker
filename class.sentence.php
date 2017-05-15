@@ -83,7 +83,7 @@ class Sentence {
 	}
 	
 	private function correctSentence($sentence_string) {
-		$correction_array = array(
+		$correction_array = [
 		" à le " => " au ",
 		" à les " => " aux ",
 		" de a" => " d’a",
@@ -98,11 +98,17 @@ class Sentence {
 		" de A" => " d’A",
 		" de E" => " d’E",
 		" de I" => " d’I",
-		" de de " => " de ",
-		" de des " => " des ",
-		" de le " => " du ",
+		" de O" => " d’O",
+		" de U" => " d’U",
 		" le la " => " la ",
-		" de les " => " des ",
+		" le a" => " l’a",
+		" le à" => " l’à",
+		" le e" => " l’e",
+		" le é" => " l’é",
+		" le è" => " l’è",
+		" le i" => " l’i",
+		" le o" => " l’o",
+		" le u" => " l’u",
 		" le le " => " le ",
 		" le les " => " les ",
 		" un l’" => " un ",
@@ -121,7 +127,11 @@ class Sentence {
 		" que E" => " qu’E",
 		" que I" => " qu’I",
 		" que U" => " qu’U",
-		);
+		" de de " => " de ",
+		" de des " => " des ",
+		" de le " => " du ",
+		" de les " => " des ",
+		];
 		$sentence_string = strtr($sentence_string,$correction_array);
 		if (substr($sentence_string, 0, 3) == '“' || substr($sentence_string, 0, 3) == '"'){ // Uppercase the second char, if the first char is a double quote
 			$second_char = substr($sentence_string, 3, 1); // Get the second char
