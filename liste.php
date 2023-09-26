@@ -40,7 +40,7 @@ if (!empty($_GET['page'])){
 			<div id="pages">
 				<?php
 					// PAGINATION
-					include("connex.php");	
+					include("connect.php");	
 					$bdd = database_connect();
 					$req = $bdd->query("SELECT COUNT(*) FROM fakenews");
 					$rep = $req->fetch();

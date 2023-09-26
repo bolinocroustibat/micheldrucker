@@ -1,7 +1,7 @@
 ﻿<?php
 
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; // used by header metas
-include("connex.php");
+include("connect.php");
 
 // RECUPERATION DES DONNEES EN CAS DE CHARGEMENT DE LA PAGE AVEC HASH
 if(isset($_GET['hash']) && $_GET['hash']!='') { // Si on recoit un hash
